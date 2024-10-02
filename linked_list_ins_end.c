@@ -15,7 +15,7 @@ node *create_node(int val)
     return new_node;
 }
 
-void travers(node *head)
+void traversal(node *head)
 {
     while (head != NULL)
     {
@@ -53,8 +53,12 @@ int main()
     third_node->next = fourth_node;
     last = last->next;
 
-    insert(last,50);
-    travers(head);
+   printf("linked list before insertion");
+    traversal(head);
 
+    insert(last,50);
+
+   printf("\ninked list after insertion at end");
+    traversal(head);
     return 0;
 }
