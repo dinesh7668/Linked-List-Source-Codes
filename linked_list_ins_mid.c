@@ -66,7 +66,12 @@ int main()
     third_node->next = fourth_node;
     last = last->next;
 
-    insert(head, 30);
-    travers(head);
+     printf("\nlinked list before insertion");
+     travers(head);
+
+     insert(head, 30);
+
+     printf("\nlinked list after insertion 30");
+     travers(head);
     return 0;
 }
