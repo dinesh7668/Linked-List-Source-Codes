@@ -53,8 +53,13 @@ int main()
     third->next = fourth;
     last = last->next;
     fourth->next = NULL;
+ 
+    printf("linked list before insertion \n");
+    traversal(head);
 
     head = insertbeg(head, 50);
+
+   printf("\nlinked list after insertion");
     traversal(head);
     return 0;
 }
