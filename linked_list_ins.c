@@ -7,14 +7,14 @@ typedef struct node
     struct node *next;
 } node;
 
-int traversal(node *ptr)
+void traversal(node *head)
 {
+    node *ptr = head;
     while (ptr != NULL)
     {
         printf("\n%d", ptr->data);
         ptr = ptr->next;
     }
-    return 0;
 }
 
 node *createnode(int val)
