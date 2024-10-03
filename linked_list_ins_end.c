@@ -17,10 +17,11 @@ node *create_node(int val)
 
 void traversal(node *head)
 {
-    while (head != NULL)
+    node *ptr = head;
+    while (ptr != NULL)
     {
-        printf("\n%d", head->data);
-        head = head->next;
+        printf("\n%d", ptr->data);
+        ptr = ptr->next;
     }
 }
 
