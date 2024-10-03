@@ -14,12 +14,13 @@ node *create_node(int val)
     return new_node;
 }
 
-void travers(node *head)
+void travers(node *ptr)
 {
-    while (head != NULL)
+    node *qtr = ptr;
+    while (qtr != NULL)
     {
-        printf("\n%d", head->data);
-        head = head->next;
+        printf("\n%d", qtr->data);
+        qtr = qtr->next;
     }
 }
 
