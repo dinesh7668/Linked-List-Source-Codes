@@ -15,7 +15,7 @@ node *createnode()
 {
     node* newnode = (node*)malloc(sizeof(node));
     printf("Enter student's name : ");
-    scanf("%s", &newnode->name);
+    scanf("%s", newnode->name);
     printf("Enter students reg_no. : ");
     scanf("%d", &newnode->reg);
     printf("Enter students roll_no. : ");
@@ -33,6 +33,7 @@ node *inputStudentData(node *head, node *last)
     if (ptr->next == NULL)
     {
         ptr->next = createnode();
+        printf("Data saved succesfully !\n");
         last = ptr->next;
     }
     else
@@ -43,6 +44,8 @@ node *inputStudentData(node *head, node *last)
             last = ptr;
         }
         ptr->next = createnode();
+        printf("Data saved succesfully !\n");
+
     }
     return last;
 }
@@ -116,7 +119,7 @@ void updateStudent(node *head)
         {
             printf("Enter data to be updated :");
             printf("\nEnter student's name : ");
-            scanf("%s", &ptr->name);
+            scanf("%s", ptr->name);
             printf("Enter students reg_no. : ");
             scanf("%d", &ptr->reg);
             printf("Enter students roll_no. : ");
@@ -141,7 +144,7 @@ void displayStudent(node *head)
     }
     else
     {
-        printf("\nEntered data is :");
+        printf("\nAvailable data in list is :");
         printf("\nName \tRoll \tReg \tPercentage.");
         while (ptr != NULL)
         {
