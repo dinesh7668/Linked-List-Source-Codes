@@ -156,7 +156,7 @@ int main()
     }
     case 3:
     {
-        printf("Enter data to delete a node matching with that data field : ");
+        printf("Enter data to delete a node matching with that data : ");
         scanf("%d",&val);
         head = deleteNode_Mid(head, val);
         break;
